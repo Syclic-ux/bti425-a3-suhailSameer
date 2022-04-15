@@ -1,12 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BlogPost } from '../BlogPost';
 import { PostService } from '../post.service';
+
 @Component({
-  selector: 'app-widget-latest-posts',
-  templateUrl: './widget-latest-posts.component.html',
-  styleUrls: ['./widget-latest-posts.component.css']
+  selector: 'app-footer-posts-component',
+  templateUrl: './footer-posts-component.component.html',
+  styleUrls: ['./footer-posts-component.component.css']
 })
-export class WidgetLatestPostsComponent implements OnInit {
+export class FooterPostsComponentComponent implements OnInit {
 
   //@Input('post')
   //Post!:BlogPost[];

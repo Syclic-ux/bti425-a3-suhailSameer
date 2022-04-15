@@ -9,6 +9,8 @@ import { BlogPost } from '../BlogPost';
 })
 export class PostComponent implements OnInit {
 
+  uri:string = "mongodb+srv://dbUser:Suhail!234@senecaweb.lswxd.mongodb.net/blog-suhailSameer?retryWrites=true&w=majority";
+
   blogPosts: Array<BlogPost> = blogData;
 
   constructor() { }

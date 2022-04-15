@@ -13,6 +13,7 @@ export class PostCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    //console.log("Post-Card: " + this.Post);
   }
 
 }

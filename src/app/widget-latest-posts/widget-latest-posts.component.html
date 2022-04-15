@@ -3,7 +3,7 @@
     <header>
       <h3 class="h6">Latest Posts</h3>
     </header>
-    <div class="blog-posts" *ngFor = "let thePost of Post"><a routerLink>
+    <div class="blog-posts" *ngFor = "let thePost of Post"><a  [routerLink]="['/post', thePost._id]">
         <div class="item d-flex align-items-center">
             <div class="image"><img [src]= thePost.featuredImage alt="..." class="img-fluid"></div>
             <div class="title"><strong>{{thePost.title}}</strong>

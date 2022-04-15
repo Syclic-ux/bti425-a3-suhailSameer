@@ -3,14 +3,14 @@
       <!-- Latest Posts -->
       <main class="post blog-post col-lg-8"> 
         <div class="container">
-          <app-post-data [post] = blogPosts[0]></app-post-data>
+          <app-post-data></app-post-data>
         </div>
       </main>
       <aside class="col-lg-4">
         <!-- Widget [Search Bar Widget]-->
         <app-widget-search></app-widget-search>
         <!-- Widget [Latest Posts Widget] -->
-        <app-widget-latest-posts [post]="blogPosts.slice(0,3)"></app-widget-latest-posts>
+        <app-widget-latest-posts></app-widget-latest-posts>
         <!-- Widget [Categories Widget]-->
         <app-categories></app-categories>
         <!-- Widget [Tags Cloud Widget]-->

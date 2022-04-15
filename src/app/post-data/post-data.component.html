@@ -9,7 +9,7 @@
           <div class="avatar"><img src="/assets/img/user.svg" alt="..." class="img-fluid"></div>
           <div class="title"><span>{{Post.postedBy}}</span></div></a>
         <div class="d-flex align-items-center flex-wrap">       
-          <div class="date"><i class="icon-clock"></i> {{Post.postDate}}</div>
+          <div class="date"><i class="icon-clock"></i> {{Post.postDate | date:'mediumDate'}}</div>
           <div class="views"><i class="icon-eye"></i> {{Post.views}}</div>
           <div class="comments meta-last"><i class="icon-comment"></i>{{Post.comments.length}}</div>
         </div>
@@ -17,7 +17,7 @@
       <div class="post-body">
         <p innerHTML = {{Post.post}}></p>
       </div>
-      <div class="post-tags"><a routerLink *ngFor = "let tag of Post.tags" class="tag">{{tag}}</a> </div>
+      <div class="post-tags"><a [routerLink]="['/blog']" [queryParams]="{ tag: tag.substring(1) }" *ngFor = "let tag of Post.tags" class="tag">{{tag}}</a> </div>
       <div class="post-comments">
         <header>
           <h3 class="h6">Post Comments<span class="no-of-comments">({{Post.comments.length}})</span></h3>
@@ -37,13 +37,13 @@
         <header>
           <h3 class="h6">Leave a reply</h3>
         </header>
-        <form action="#" class="commenting-form">
+        <form #commentForm = "ngForm" class="commenting-form" (ngSubmit)="submitComment()">
           <div class="row">
             <div class="form-group col-md-12">
-              <input type="text" name="username" id="username" placeholder="Name" class="form-control">
+              <input type="text" name="username" id="username" [(ngModel)]="commentName" class="form-control">
             </div>
             <div class="form-group col-md-12">
-              <textarea name="usercomment" id="usercomment" placeholder="Type your comment" class="form-control"></textarea>
+              <textarea name="usercomment" id="usercomment" [(ngModel)]="commentText" placeholder="Type your comment" class="form-control"></textarea>
             </div>
             <div class="form-group col-md-12">
               <button type="submit" class="btn btn-secondary">Submit Comment</button>

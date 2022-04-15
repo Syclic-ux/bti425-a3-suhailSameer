@@ -1,0 +1,11 @@
+<!-- [Footer Posts] -->
+<div class="latest-posts">
+    <div class="post" *ngFor = "let thePost of Post">
+        <a routerLink>
+        <div class="post d-flex align-items-center">
+        <div class="image"><img [src]=thePost.featuredImage alt="..." class="img-fluid"></div>
+        <div class="title"><strong>{{thePost.title}}</strong><span class="date last-meta">{{thePost.postDate | date:'mediumDate'}}</span></div>
+        </div>
+        </a>
+    </div>
+   </div>
