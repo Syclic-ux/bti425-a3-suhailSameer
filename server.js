@@ -5,10 +5,10 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('/dist/bti425-a3-suhail-sameer.json'));
+app.use(express.static('/dist/bti425-a3-suhail-sameer'));
 
 app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: 'dist/bti425-a3-suhail-sameer.json'}
+    res.sendFile('index.html', {root: 'dist/bti425-a3-suhail-sameer'}
   );
   });
 
